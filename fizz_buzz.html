@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input  id="box">
+    <button onclick="printloop()">PRINT</button>
+    <ul id="list">
+
+    </ul>
+    
+    <script>
+        
+        let box=document.getElementById('box');
+        let list=document.getElementById('list'); 
+        function printloop()
+        {
+            let n=parseInt(box.value);   
+            let start=new Date().getTime();
+            for(let i=1;i<=n;i++)
+            {let print=' ';
+                if(i%3==0)print+='fizz';
+                if(i%5==0)print+='buzz';
+                if(print==' ')print=i;
+                list.innerHTML+='<li>'+ print +'</li>' ;
+                }
+                     
+
+                let end=new Date().getTime()
+                console.log(end-start)
+            }
+        </script>
+    </body>
+    </html>
